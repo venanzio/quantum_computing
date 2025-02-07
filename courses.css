@@ -1,0 +1,94 @@
+/* Venanzio's style file */
+
+body {
+  font-family: serif;
+  font-size: 100%;
+}
+
+a { 
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  background-color: #dddddd;
+}
+
+.fullimg {
+  width: 90%;
+  border: 1px black solid;
+  padding: 2%;
+  margin: 3%;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  border: 1px blue solid;
+}
+
+.right {
+  margin-left: 53%;
+  border: 1px green solid;
+}
+
+
+#header{
+  text-align: center;
+  border-bottom: 3px double black;
+}
+
+#pane{
+  float: left;
+  width: 20%;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 80%;
+  font-family: sans-serif;
+  background-color: #eeeeff;
+}
+
+#contents{
+  border-left: 3px solid gray;
+  float: left;
+  width: 75%;
+  padding-left: 1%;
+}
+
+#footer{
+  border-top: 3px double gray;
+  clear: both;
+  width: 100%;
+  text-align: center;
+}
+
+table {
+  background-color: #ccccff;
+  border: 1px solid black;
+  border-spacing: 0px;
+  border-collapse: separate;
+  padding: 5px;
+}
+
+td { 
+  spacing: 0px;
+  padding: 10px;
+  border-top: 1px solid gray;
+}
+
+tr.special {
+ background-color: #ccffcc;
+}
+
+tr.extra {
+ background-color: #ffffaa;
+}
+ 
+
+tr.none {
+ background-color: #ffcccc;
+}

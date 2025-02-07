@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+  <meta name="description"
+        content="G54FOP Foundations of Programming">
+  <meta name="keywords"
+        content="foundations,programming,lambda calclulus,machines,languages,automata,grammars,mathematics,logic,types,computer,science,proofs,nottingham,university">
+
+<title>Coalgebras and Infinite Data Structures</title>
+
+  <link rel = "stylesheet" href = "../courses.css">
+  <link rel="icon" href="http://webservices.cs.nott.ac.uk/favicon.ico">
+</head>
+
+<body>
+
+<div id="header">
+<h1>Coalgebras and Infinite Data Structures</h1>
+<p>
+  <strong>Midlands Graduate School 2020</strong>
+</p>
+<p>
+<strong><a href="http://www.duplavis.com/venanzio/">Venanzio Capretta</a></strong>
+(<a href="mailto:venanzio@duplavis.com?subject=MGS 2020">venanzio@duplavis.com</a>)
+</p>
+</div>
+
+<div id="pane">
+
+<img class="fullimg" src="escher_inf.gif" alt="INF image">
+
+<hr>
+
+<div id = "menu">
+<ul>
+<li><a href="http://www.cs.nott.ac.uk/MGS/">MGS - Midlands Graduate School</a></li>
+<li><a href="http://www.cs.le.ac.uk/events/mgs2017/">MGS 2017 - Leicester</a></li>
+</ul>
+</div>
+
+<hr>
+
+<address>
+Venanzio Capretta<br>
+School of Computer Science<br>
+University of Nottingham<br>
+Jubilee Campus, Wollaton Road<br>
+Nottingham NG8 1BB, UK<br><br>
+<strong>T:</strong> +44(0) 115 9514251<br>
+<strong>F:</strong> +44(0) 115 9514254<br>
+<strong>E:</strong> <a href="mailto:venanzio@duplavis.com?subject=MGS 2020">venanzio@duplavis.com</a>	
+</address>
+
+<hr>
+
+<!--
+<a href="http://www.cis.upenn.edu/~bcpierce/tapl/index.html"><img class="fullimg" src="http://mitpress.mit.edu/covers/9780262162098.jpg" alt="HMU cover"></a>
+-->
+
+</div> <!-- pane -->
+
+
+<div id="contents">
+
+<p>
+<strong>
+MGS 2020 has been cancelled due to Covid-19.<br>
+It was going place at the University of Sheffield in the period 20-24 April.<br>
+This page contains the material from the 2017 course.
+</strong>
+</p>
+<p>
+Although computers have a finite memory and cannot store an infinite amount of
+information, Functional Programming and Type Theory allow us to represent 
+infinite mathematical objects.
+These are represented as processes that generate part of the structure at every 
+step. The mathematical/categorical formulation for these processes is the
+notion of coalgebra. 
+</p><p>
+The first part of the course is an introduction to coalgebras with important 
+examples like streams (infinite sequences) and non-well-founded trees. 
+The most powerful proof method for infinite data structures is the Coinduction 
+Principle, which allows us to prove the equality of two objects by a 
+bisimulation, itself an infinite process that generates the equality by 
+successive stages. 
+</p><p>
+We will study methods to construct sound infinite objects, to solve recursive 
+equations on them and to prove their properties. Examples will be given using 
+functional programming in Haskell and formal reasoning in Coq. 
+In Type Theory we can define coinductively not just single types, but families 
+of types, predicates and relations. This leads to a proof technique in which 
+the statement to be proved can be used recursively as long as it satisfies 
+a guardedness conditions. It amounts to constructing a proof with an infinite 
+number of logical steps. 
+</p><p>
+We can combine coinduction with induction in several ways to define types with 
+a complex internal structure. One example is the definition of all continuous 
+functions between streams. A further generalization consists in defining 
+a coinductive type simultaneously with a recursive function on it, in the style 
+of induction-recursion. This leads to a very general notion of Wander types, 
+that can be instantiated to many of the most common type-theoretic 
+constructions. 
+</p>
+
+<h2>Outline of lectures</h2>
+<p>
+In this section you will find, after each lecture, a list of topics that were taught and references to the chapters of the textbook.
+</p>
+<table>
+<tr>
+<th>Date</th><th>Topics</th><th>Lecture Material</th></tr>
+<tr>
+  <td><strong>1.</strong> Sun 9 Apr 2017</td>
+  <td>Introduction to Infinite Types<br>
+      Streams and Non-well-founded Trees<br>
+      Productivity and Guardedness
+  </td>
+  <td>Outline of <a href="mgs2017_lecture1.pdf">Lecture 1</a><br>
+      <a href="coi_ch8.pdf">Chapter 8</a><br> of <em>The Construction of Infinity<br>
+</tr>
+<tr class="special">
+  <td><strong>1E.</strong> Mon 10 Apr 2017</td>
+  <td>Exercise Class 1
+  </td>
+  <td><a href="mgs2017_l1.hs">Haskell Code</a>
+  </td>
+</tr>
+<tr>
+  <td><strong>2.</strong> Mon 10 Apr 2017</td>
+  <td>(Final) Coalgebras<br>
+      Bisimulation and CoInduction
+  </td>
+  <td>Outline of <a href="mgs2017_lecture2.pdf">Lecture 2</a><br>
+      <a href="../publications/Coalgebras_CMCS_2010.pdf">Coalgebras in functional programming<br> and type theory</a>
+  </td>
+</tr>
+<tr class="special">
+  <td><strong>2E.</strong> Tue 11 Apr 2017</td>
+  <td>Exercise Class 2
+  </td>
+  <td><a href="mgs2017_l2.v">Coq Code</a>
+  </td>
+</tr>
+<tr>
+  <td><strong>3.</strong> Tue 11 Apr 2017</td>
+  <td>Monadic Stream Functions<br>
+      The Continuity Principle
+  </td>
+  <td>Outline of <a href="mgs2017_lecture3.pdf">Lecture 3</a><br>
+      <a href="../publications/monadic_continuity_LICS2017.pdf">The Continuity of<br> Monadic Stream Functions</a><br>
+      with <a href="http://www.cs.nott.ac.uk/~psxjf/">Jon Fowler</a>
+</tr>
+<tr class="special">
+  <td><strong>3E.</strong> Wed 13 Apr 2017</td>
+  <td>Exercise Class 3
+  </td>
+  <td><a href="mgs2017_l3.hs">Haskell Code</a>
+  </td>
+</tr>
+<tr>
+  <td><strong>4.</strong> Wed 12 Apr 2017</td>
+  <td>CoInductive Reasoning<br>
+      Common Knowledge
+  </td>
+  <td><a href="../publications/common_knowledge.pdf">The Coinductive Formulation<br> of Common Knowledge</a><br>
+      with <a href="http://www.cs.nott.ac.uk/~psxcb4/">Colm Baston</a>
+  </td>
+</tr>
+<tr class="special">
+  <td><strong>4E.</strong> Thu 13 Apr 2017</td>
+  <td>Exercise Class 4
+  </td>
+  <td><a href="../publications/common_knowledge.v">Coq Code</a>
+  </td>
+</tr>
+<tr class="none">
+  <td><strong>A.</strong> from MGS 2013</td>
+  <td>Strategy Trees<br>
+      Function Tabulation
+  </td>
+  <td><a href="mgs2017_lectureA.pdf">Lecture A</a>
+  </td>
+</tr>
+<tr class="none">
+  <td><strong>B.</strong> from MGS 2013</td>
+  <td>Simultaneous (Co)Induction / Recursion<br>
+      Wander Types
+  </td>
+  <td><a href="mgs2017_lectureB.pdf">Lecture B</a><br>
+      <a href="../publications/Wander_Types_PI2013.pdf">Wander Types</a>
+  </td>
+</tr>
+</table>
+
+</p>
+
+<div id="footer">
+<blockquote>
+While jostling against all manner of people it has been impressed upon my mind that the successful ones are those who have a natural faculty for solving puzzles. Life is full of puzzles, and we are called upon to solve such as fate throws our way. [<a href="http://en.wikipedia.org/wiki/Sam_Loyd">Sam Loyd</a>]
+</blockquote>
+</div> <!-- footer -->
+
+
+</body>
+
+</html>
